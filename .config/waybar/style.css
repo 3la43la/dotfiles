@@ -1,38 +1,78 @@
+/* -----------------------------------------------------
+ *  Alaa.ksa Waybar Style - Glassmorphism Edition 2026
+ *  ----------------------------------------------------- */
+
 * {
-border: none;
-font-family: "JetBrains Mono", "Vazirmatn", "Font Awesome 6 Free";
-font-size: 13px;
-font-weight: bold;
+    border: none;
+    /* تأكد من تثبيت الخطوط: JetBrains Mono و Font Awesome */
+    font-family: "JetBrains Mono", "Vazirmatn", "Font Awesome 6 Free", "Font Awesome 6 Brands";
+    font-size: 14px;
+    font-weight: bold;
 }
 
+/* جعل الشريط الأساسي شفافاً لتبدو الكبسولات طافية */
 window#waybar {
     background-color: transparent;
 }
 
+/* التنسيق الموحد لجميع الكبسولات (Modules) */
 #workspaces, #clock, #cpu, #memory, #pulseaudio, #language, #tray {
-background-color: rgba(30, 30, 46, 0.6);
+background-color: rgba(30, 30, 46, 0.7); /* شفافية Catppuccin Mocha */
 border: 1px solid rgba(255, 255, 255, 0.1);
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 border-radius: 20px;
 padding: 2px 15px;
-margin: 4px 3px;
+margin: 6px 4px;
 color: #cdd6f4;
+transition: all 0.3s ease-in-out;
 }
 
-#workspaces:hover, #clock:hover, #pulseaudio:hover, #language:hover {
+/* تأثير عند تمرير الماوس فوق الكبسولات */
+#workspaces:hover, #clock:hover, #pulseaudio:hover, #language:hover, #cpu:hover, #memory:hover {
 background-color: rgba(49, 50, 68, 0.9);
 border: 1px solid rgba(137, 180, 250, 0.6);
 }
 
+/* --- تنسيق مساحات العمل (الأيقونات) --- */
 #workspaces button {
-padding: 0 8px;
-color: #6c7086;
+padding: 0 10px;
+color: #6c7086; /* لون الأيقونات غير النشطة */
+font-size: 16px;
+border-radius: 15px;
 }
 
 #workspaces button.active {
-color: #89b4fa;
+color: #89b4fa; /* لون Catppuccin Blue للأيقونة النشطة */
+background-color: rgba(137, 180, 250, 0.1); /* توهج خفيف خلف الأيقونة */
 }
 
-#clock { color: #fab387; }
-#language { color: #b4befe; }
-#pulseaudio { color: #a6e3a1; }
+#workspaces button.urgent {
+color: #f38ba8; /* لون أحمر للتنبيهات */
+}
+
+/* --- ألوان مخصصة لكل كبسولة لإعطاء حيوية للواجهة --- */
+#clock {
+color: #fab387; /* لون برتقالي هادئ للساعة */
+}
+
+#language {
+color: #b4befe; /* لون لافندر للغة */
+min-width: 40px;
+}
+
+#pulseaudio {
+color: #a6e3a1; /* لون أخضر للصوت */
+}
+
+#cpu {
+color: #89dceb; /* لون سماوي للمعالج */
+}
+
+#memory {
+color: #cba6f7; /* لون بنفسجي للذاكرة */
+}
+
+#tray {
+padding: 0 10px;
+margin-right: 10px;
+}
