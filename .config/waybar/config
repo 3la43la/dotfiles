@@ -1,7 +1,15 @@
+{
+    "layer": "top",
+    "modules-right": ["hyprland/language", "clock"],
 
-"hyprland/language": {
+    "hyprland/language": {
         "format": "󰌌 {}",
         "format-ar": "عربي",
         "format-en": "EN",
         "on-click": "hyprctl switchxkblayout all next"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}"
     }
+}

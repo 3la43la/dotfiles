@@ -4,9 +4,9 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: rgba(40, 42, 54, 0.8); /* الرقم 0.8 يعني شفافية بنسبة 80% */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    color: #f8f8f2;
     transition-property: background-color;
     transition-duration: .5s;
 }
