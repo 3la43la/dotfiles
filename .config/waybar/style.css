@@ -272,13 +272,6 @@ label:focus {
     background-color: #51a37a;
 }
 
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
 
 #keyboard-state {
     background: #97e1ad;
@@ -323,4 +316,15 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#language {
+    background-color: #383c4a; /* لون خلفية هادئ واحترافي */
+    color: #ffffff;            /* نص أبيض لسهولة القراءة */
+    padding: 0 12px;           /* مساحة أكبر لتناسب الخط العربي */
+    margin: 4px;
+    border-radius: 8px;        /* حواف مستديرة عصرية */
+    font-family: "Cairo", "Vazirmatn", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
 }

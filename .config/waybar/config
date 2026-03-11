@@ -1,0 +1,7 @@
+
+"hyprland/language": {
+        "format": "󰌌 {}",
+        "format-ar": "عربي",
+        "format-en": "EN",
+        "on-click": "hyprctl switchxkblayout all next"
+    }
