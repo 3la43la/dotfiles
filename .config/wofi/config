@@ -1,0 +1,9 @@
+width=450
+height=350
+location=center
+show=drun
+prompt=البحث عن تطبيق...
+filter_rate=100
+allow_images=true
+# تفعيل ملف الـ CSS الذي صنعناه
+style=~/.config/wofi/style.css
