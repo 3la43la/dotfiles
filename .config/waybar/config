@@ -1,15 +1,53 @@
 {
     "layer": "top",
-    "modules-right": ["hyprland/language", "clock"],
+    "position": "top",
+    "margin-top": 8,
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 10,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "hyprland/language", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true
+    },
 
     "hyprland/language": {
         "format": "󰌌 {}",
-        "format-ar": "عربي",
         "format-en": "EN",
+        "format-ar": "عربي",
         "on-click": "hyprctl switchxkblayout all next"
     },
 
     "clock": {
-        "format": "{:%H:%M}"
+        "format": "  {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {}%"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
     }
 }
